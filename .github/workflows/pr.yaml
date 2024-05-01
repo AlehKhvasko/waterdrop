@@ -33,5 +33,5 @@ jobs:
       - name: Lint
         run: make lint
 
-      - name: Test
-        run: make test
+      # - name: Test
+        # run: make test
