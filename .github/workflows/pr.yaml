@@ -11,7 +11,7 @@ jobs:
   qulity-assurance:
     name: Qulity Assurance
     runs-on: ubuntu-latest
-    container: FROM python:3.10-alpine
+    container: python:3.10-alpine
     strategy:
       fail-fast: false
       matrix:
