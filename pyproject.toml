@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "server"
+version = "0.1.0"
+description = ""
+authors = ["Aleh K"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "3.10.14"
+djangorestframework = "^3.15.1"
+Django = "^5.0.4"
+black = "^24.4.2"
+isort = "^5.13.2"
+pytest = "^8.2.0"
+bandit = "^1.7.8"
+pydocstyle = "^6.3.0"
+pre-commit = "^3.7.0"
+yapf = "^0.40.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

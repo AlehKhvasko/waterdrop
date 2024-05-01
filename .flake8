@@ -1,0 +1,9 @@
+[flake8]
+exclude = .git,__pycache__,.venv, .env
+ignore = C101, Q000
+filenames = *.py
+accept-encodings = utf-8
+inline-quotes = single
+max-complexity = 12
+max-line-length = 120
+multiline-quotes = double
