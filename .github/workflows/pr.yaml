@@ -14,16 +14,12 @@ jobs:
     container: python:3.10-alpine
     strategy:
       fail-fast: false
-      matrix:
-        poetry-version: ["1.2.2", "1.7.1"]
-
+      
     steps:
       - uses: actions/checkout@v4
 
       - name: Run image
         uses: abatilo/actions-poetry@v2
-        with:
-          poetry-version: ${{ matrix.poetry-version }}
 
       - name: Install dependencies
         run: make install && make install-pre-commit
