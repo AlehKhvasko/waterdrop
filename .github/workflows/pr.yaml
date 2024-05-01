@@ -19,9 +19,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Poetry
-        defaults:
-          run:
-            shell: bash
         uses: snok/install-poetry@v1
         with:
           installation-arguments: --git https://github.com/python-poetry/poetry.git@69bd6820e320f84900103fdf867e24b355d6aa5d
