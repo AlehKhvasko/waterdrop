@@ -1,6 +1,6 @@
 .PHONY: install
 install:
-	poetry install; 
+	poetry install;
 
 .PHONY: migrate
 migrate:
@@ -10,7 +10,7 @@ migrate:
 .PHONY: install-pre-commit
 install-pre-commit:
 	poetry run pre-commit uninstall; poetry run pre-commit install
-	
+
 .PHONY: runserver
 runserver:
 	poetry run python manage.py runserver 0.0.0.0:8000
