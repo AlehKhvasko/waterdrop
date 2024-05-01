@@ -1,0 +1,36 @@
+name: Quality Assurance
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  qulity-assurance:
+    name: Qulity Assurance
+    runs-on: ubuntu-latest
+    # container: python:3.10-alpine
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'  # Version range or exact version of a Python version to use, using SemVer's version range syntax
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          installation-arguments: --git https://github.com/python-poetry/poetry.git@69bd6820e320f84900103fdf867e24b355d6aa5d
+
+      - name: Install dependencies
+        run: make install && make install-pre-commit
+
+      - name: Lint
+        run: make lint
+
+      # - name: Test
+      #   run: make test
