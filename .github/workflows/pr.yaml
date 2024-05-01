@@ -22,8 +22,8 @@ jobs:
 
       - name: Run image
         uses: abatilo/actions-poetry@v2
-          with:
-            poetry-version: ${{ matrix.poetry-version }}
+        with:
+          poetry-version: ${{ matrix.poetry-version }}
 
       - name: Install dependencies
         run: make install && make install-pre-commit
