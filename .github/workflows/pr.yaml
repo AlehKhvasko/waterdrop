@@ -19,9 +19,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Poetry
-        uses: abatilo/actions-poetry@v2
+        uses: snok/install-poetry@v1
         with:
-          poetry-version: 1.4.2
+          version: 1.5.1
 
       - name: Install dependencies
         run: make install && make install-pre-commit
