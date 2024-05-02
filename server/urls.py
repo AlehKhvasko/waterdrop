@@ -15,10 +15,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from __future__ import annotations
-
+import logging, coloredlogs
 from django.contrib import admin
 from django.urls import path
+coloredlogs.install()
 
+logger = logging.getLogger(__name__)
+logger.info("server.urls")
+logger.warning("server.urls")
+logger.error("server.urls")
+logger.error("server.urls")
 urlpatterns = [
     path("admin/", admin.site.urls),
 ]
