@@ -16,8 +16,19 @@ Including another URLconf
 """
 from __future__ import annotations
 
+import logging
+
+import coloredlogs
 from django.contrib import admin
 from django.urls import path
+
+coloredlogs.install()
+
+logger = logging.getLogger(__name__)
+logger.info("server.urls")
+logger.warning("server.urls")
+logger.error("server.urls")
+logger.error("server.urls")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
