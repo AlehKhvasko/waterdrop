@@ -324,6 +324,14 @@ pyyaml = ">=5.1"
 virtualenv = ">=20.10.0"
 
 [[package]]
+name = "psycopg2-binary"
+version = "2.9.9"
+description = "psycopg2 - Python-PostgreSQL Database Adapter"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "pydocstyle"
 version = "6.3.0"
 description = "Python docstring style checker"
@@ -499,7 +507,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-ena
 [metadata]
 lock-version = "1.1"
 python-versions = "3.10.14"
-content-hash = "26f81433b856552323fcbb7af768ea521356d3a33cb65d4756ec0c542d6c37f1"
+content-hash = "bc569ec601d67bc35a02527e2775f952f4c3d8b04eed2843a77ee663d1117866"
 
 [metadata.files]
 asgiref = []
@@ -529,6 +537,7 @@ pbr = []
 platformdirs = []
 pluggy = []
 pre-commit = []
+psycopg2-binary = []
 pydocstyle = []
 pygments = []
 pyreadline3 = []

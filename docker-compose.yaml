@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  app:
+  code:
     build:
       context: .
       args:
@@ -12,3 +12,24 @@ services:
       - ./server:/server
     command: >
       sh -c "poetry run python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=waterdrop_db
+      - DB_USER=waterdrop_user
+      - DB_PASS=waterdrop_@dev
+
+    depends_on:
+      - db  
+
+  db:
+    image: postgres:16.2-alpine3.19
+    restart: always
+    volumes:
+      - waterdrop-db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=waterdrop_db
+      - POSTGRES_USER=waterdrop_user
+      - POSTGRES_PASSWORD=waterdrop_@dev
+
+volumes:
+  waterdrop-db-data:
