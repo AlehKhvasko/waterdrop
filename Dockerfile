@@ -12,6 +12,6 @@ COPY poetry.lock pyproject.toml /code/
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install poetry && \
-    /py/bin/poetry install 
+    /py/bin/poetry install
 
 ENV PATH="/py/bin:$PATH"
