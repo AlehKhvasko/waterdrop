@@ -17,6 +17,7 @@ pydocstyle = "^6.3.0"
 pre-commit = "^3.7.0"
 yapf = "^0.40.2"
 coloredlogs = "^15.0.1"
+psycopg2-binary = "^2.9.9"
 
 [tool.poetry.dev-dependencies]
 
